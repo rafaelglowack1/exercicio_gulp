@@ -10,7 +10,7 @@ gulp.task("default" , function(done){
 })
 
 function compilaSASS(){
-    return gulp.src('./source/styles/main.scss')
+    return gulp.src('./source/styles/*.scss')
     .pipe(sass())
     .pipe(gulp.dest('./build/styles'))
 }
