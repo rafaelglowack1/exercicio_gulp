@@ -28,7 +28,7 @@ function compilaIMG(){
     .pipe(gulp.dest('./build/img'))
 }
 
-
+exports.default= gulp.parallel(compilaSASS,compilaIMG,compilaJS);
 exports.watch = function(){
     gulp.watch('./source/styles/*.scss' , {ignoreInitial:false}, gulp.series(compilaSASS));
     gulp.watch('./source/script/*.js' , {ignoreInitial:false}, gulp.series(compilaJS));
